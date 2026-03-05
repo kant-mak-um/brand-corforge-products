@@ -3,34 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Brand Site (Template)</title>
-  <meta name="robots" content="noindex,nofollow" />
+  <title>CorForge — Composite Rigging & Marine Hardware</title>
+  <meta name="description" content="CorForge develops composite rigging and marine hardware for sailboats and other watercraft—blocks, cleats, travelers, rudders, and more." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="CorForge — Composite Rigging & Marine Hardware" />
+  <meta property="og:description" content="Composite rigging and marine hardware for sailboats and watercraft." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.corforge.com/" />
+
   <style>
-    body { font-family: system-ui, Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; }
-    header { border-bottom: 1px solid #ddd; padding-bottom: 12px; margin-bottom: 18px; }
-    .card { border: 1px solid #ddd; border-radius: 10px; padding: 14px; margin: 12px 0; }
-    code { background: #f6f6f6; padding: 2px 6px; border-radius: 6px; }
+    :root { --border:#ddd; --muted:#666; --bg:#fafafa; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 980px; margin: 44px auto; padding: 0 18px; line-height: 1.45; }
+    header { display:flex; justify-content:space-between; gap:18px; align-items:baseline; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:20px; }
+    .brand { font-size: 28px; margin: 0; }
+    .tag { color: var(--muted); margin: 6px 0 0; }
+    nav a { margin-right: 14px; color: #0b57d0; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 14px; }
+    .card { border:1px solid var(--border); border-radius: 12px; padding: 16px; background: white; }
+    .card h2 { margin: 0 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); }
+    .pill { display:inline-block; font-size: 12px; padding: 3px 10px; border:1px solid var(--border); border-radius: 999px; background: var(--bg); margin-right: 8px; margin-top: 6px; }
+    footer { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    code { background:#f3f3f3; padding:2px 6px; border-radius: 6px; }
+    ul { margin: 8px 0 0 18px; }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Brand Site Template</h1>
-    <p>This is a starter static site. Each brand repo will replace the title, imagery, and catalog.</p>
+    <div>
+      <h1 class="brand">CorForge</h1>
+      <p class="tag">Composite rigging + marine hardware for sailboats and watercraft</p>
+    </div>
+    <nav aria-label="Primary">
+      #overviewOverview</a>
+      #linesLines</a>
+      #kitsKits</a>
+      #statusStatus</a>
+    </nav>
   </header>
 
-  <div class="card">
-    <h2>Status</h2>
-    <p>Coming soon. Products will be released as manufacturing scales.</p>
-  </div>
+  <main class="grid">
+    <section id="overview" class="card">
+      <h2>Overview</h2>
+      <p>
+        CorForge develops <strong>composite rigging and marine hardware</strong> for sailboats and other watercraft,
+        including blocks, cleats, travelers, rudders, and structural accessories.
+      </p>
+      <p class="muted">
+        Early sales may occur via eBay as market tests. Ecommerce and memberships will be handled by WaterWolf (private platform).
+      </p>
+      <div>
+        <span class="pill">Blocks</span>
+        <span class="pill">Cleats</span>
+        <span class="pill">Travelers</span>
+        <span class="pill">Rudders</span>
+        <span class="pill">Oar hardware</span>
+        <span class="pill">Benches / straps</span>
+      </div>
+    </section>
 
-  <div class="card">
-    <h2>Catalog</h2>
-    <p>Placeholder: <code>/catalog/products.json</code> and <code>/catalog/accessories.json</code></p>
-  </div>
+    <section id="lines" class="card">
+      <h2>Product lines (planned)</h2>
+      <ul>
+        <li><strong>Sailboat rigging</strong> — blocks, cleats, travelers, rudder systems</li>
+        <li><strong>Cross-watercraft hardware</strong> — oar locks, straps, benches, mounting systems</li>
+        <li><strong>Ecosystem compatibility</strong> — parts usable on JDP brands and other watercraft</li>
+      </ul>
+    </section>
 
-  <div class="card">
-    <h2>Advanced Pages</h2>
-    <p>Memberships + ecommerce will live on WaterWolf (separate private repo/app).</p>
-  </div>
+    <section id="kits" class="card">
+      <h2>Kits (placeholder)</h2>
+      <p class="muted">Initial hardware SKUs will be listed here as they become available.</p>
+      <p class="muted">Data source: <code>/catalog/products.json</code></p>
+    </section>
+
+    <section id="status" class="card">
+      <h2>Status</h2>
+      <p>Pre-launch. Documentation and catalog entries will expand as initial SKUs are released.</p>
+      <p class="muted">Check back as inventory and accessories mature.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© CorForge. All rights reserved unless otherwise stated in repository licensing files.</div>
+  </footer>
 </body>
 </html>
